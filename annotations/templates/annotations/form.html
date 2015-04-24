@@ -1,0 +1,10 @@
+{% load crispy_forms_tags %}
+<div class="content" data-ng-controller="AnnController">
+    {% crispy form %}
+    <button type="button" class="btn btn-default"  data-ng-click="saveItem()">Save</button>
+    <button type="button" class="btn btn-defaul" data-ng-show="item.id" data-ng-click="prev(item.id)">prev</button>
+    <button type="button" class="btn btn-defaul" data-ng-show="item.id" data-ng-click="next(item.id)">next</button>
+    <br>
+    <div class="buttons">
+    </div>
+</div>

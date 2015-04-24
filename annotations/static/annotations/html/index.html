@@ -1,0 +1,14 @@
+<div class="content" data-ng-controller="AnnController">
+    <h1>List:</h1>
+    <p>-----</p>
+    <ul class="list">
+        <li ng-repeat="item in annotations"><a ui-sref="edit({ id : [[ item.id ]]})">[[ item.text ]]</a></li>
+    </ul>
+    <p>-----</p>
+    <p><a class="btn btn-success" ui-sref="edit">Add</a></p>
+    <p>// dropdown</p>
+    <select name="select" id="select" data-ng-model="selectedItem" data-ng-change="go(selectedItem)"
+        data-ng-options="item as item.text for item in annotations">
+        <option value="">choose an annotation</option>
+    </select>
+</div>
